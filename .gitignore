@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+
+# compiled output
+*/dist
+**build
+**node_modules
+
+# Logs
+**logs
+*.log
+**npm-debug.log*
