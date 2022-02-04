@@ -1,38 +1,36 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint/eslint-plugin', 'import'],
   extends: [
-    'plugin:@typescript-eslint/recommended',
+    'react-app',
+    'react-app/jest',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'prettier',
   ],
-  root: true,
-  env: {
-    node: true,
-    jest: true,
-  },
+  plugins: ['import'],
+  parser: '@typescript-eslint/parser',
   ignorePatterns: ['.eslintrc.js'],
   rules: {
     'no-console': 'warn',
     'no-debugger': 'warn',
-    '@typescript-eslint/interface-name-prefix': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/ban-ts-comment': 'off',
+    'no-alert': 'warn',
     'import/order': [
       'error',
       {
         groups: ['builtin', 'external', 'parent', 'sibling', 'index'],
         pathGroups: [
           {
-            pattern: '@nestjs**',
+            pattern: 'react**',
             group: 'builtin',
             position: 'after',
           },
+          {
+            pattern: '*.scss',
+            patternOptions: { matchBase: true },
+            group: 'index',
+            position: 'after',
+          },
         ],
-        pathGroupsExcludedImportTypes: ['@nestjs'],
+        pathGroupsExcludedImportTypes: ['react'],
         'newlines-between': 'always',
         alphabetize: {
           order: 'asc',
@@ -41,8 +39,6 @@ module.exports = {
         warnOnUnassignedImports: true,
       },
     ],
-    'import/no-named-as-default': 'off',
-    'import/no-named-as-default-member': 'off',
   },
   settings: {
     'import/parsers': {
