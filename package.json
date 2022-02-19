@@ -1,0 +1,27 @@
+{
+  "name": "monorepo-starter-react-nest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npm-run-all lint:backend lint:frontend",
+    "lint:backend": "cd backend && npm run lint:staged",
+    "lint:frontend": "cd frontend && npm run lint:staged",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javifm86/monorepo-starter-react-nest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javifm86/monorepo-starter-react-nest/issues"
+  },
+  "homepage": "https://github.com/javifm86/monorepo-starter-react-nest#readme",
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "npm-run-all": "^4.1.5"
+  }
+}
