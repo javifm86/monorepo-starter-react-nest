@@ -7,6 +7,9 @@
     "lint": "npm-run-all lint:backend lint:frontend",
     "lint:backend": "cd backend && npm run lint:staged",
     "lint:frontend": "cd frontend && npm run lint:staged",
+    "pre-push": "npm-run-all pre-push:backend pre-push:frontend",
+    "pre-push:frontend": "cd frontend && npm run pre-push",
+    "pre-push:backend": "cd backend && npm run pre-push",
     "prepare": "husky install"
   },
   "repository": {
