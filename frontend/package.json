@@ -37,6 +37,7 @@
     "pre-push:test": "prepush-if-changed",
     "lint": "npm-run-all lint:eslint lint:tsc",
     "lint:eslint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:eslint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
     "lint:tsc": "tsc -p tsconfig.json"
   },
   "browserslist": {
